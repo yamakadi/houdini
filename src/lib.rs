@@ -1,9 +1,11 @@
 //! `Houdini` allows you to delete your executable while it's running.
 //! This is fairly straightforward for unix systems, since the executable is released
-//! after getting mapped to the memory. On windows, we use a method discovered by [@jonasLyk](https://twitter.com/jonasLyk/status/1350401461985955840)
+//! after getting mapped to the memory. On Windows, we use a method discovered by [@jonasLyk](https://twitter.com/jonasLyk/status/1350401461985955840)
 //! to delete the executable.
 //!
-//! Windows implementation heavily references [@byt3bl33d3r](https://twitter.com/byt3bl33d3r)'s Nim implementation in [OffensiveNim](https://github.com/byt3bl33d3r/OffensiveNim/blob/master/src/self_delete_bin.nim).
+//! Windows implementation heavily references [@byt3bl33d3r](https://twitter.com/byt3bl33d3r)'s
+//! Nim implementation in [OffensiveNim](https://github.com/byt3bl33d3r/OffensiveNim/blob/master/src/self_delete_bin.nim)
+//! and in turn LloydLabs' initial [`C` PoC](https://github.com/LloydLabs/delete-self-poc).
 //!
 
 #[cfg(any(target_os = "linux", target_os = "macos"))]
