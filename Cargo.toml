@@ -6,7 +6,7 @@ edition = "2018"
 homepage = "https://github.com/yamakadi/houdini"
 license = "MIT"
 repository = "https://github.com/yamakadi/houdini"
-version = "1.0.0"
+version = "1.0.1"
 
 [lib]
 crate-type = ["lib", "staticlib", "dylib"]
