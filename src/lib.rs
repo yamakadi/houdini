@@ -51,8 +51,6 @@ pub fn disappear() -> Result<(), HoudiniError> {
     {
         return disappear_impl();
     }
-
-    Err(HoudiniError::UnsupportedPlatform)
 }
 
 /// Deletes the executable for the current process.
