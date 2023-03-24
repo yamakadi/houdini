@@ -1,7 +1,7 @@
 use std::{error::Error, fmt};
 
 #[cfg(target_os = "windows")]
-use winapi::shared::ntdef::HANDLE;
+use windows::Win32::Foundation::HANDLE;
 
 impl Error for HoudiniError {}
 

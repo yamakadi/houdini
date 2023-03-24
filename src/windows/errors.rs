@@ -1,5 +1,9 @@
-use std::{error::Error, fmt};
-use winapi::shared::ntdef::HANDLE;
+use std::{
+    error::Error,
+    fmt,
+    fmt::{Display, Formatter},
+};
+use windows::Win32::Foundation::HANDLE;
 
 /// Lets you know why the executable couldn't be deleted.
 ///
@@ -17,8 +21,8 @@ pub enum HoudiniError {
 
 impl Error for HoudiniError {}
 
-impl fmt::Display for HoudiniError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for HoudiniError {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match *self {
             HoudiniError::UnsupportedPlatform => write!(f, "this platform is not supported"),
             HoudiniError::CouldNotGetModuleName => write!(f, "failed to get the module name"),
