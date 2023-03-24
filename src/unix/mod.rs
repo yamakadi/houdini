@@ -1,5 +1,3 @@
-//! I document the current module!
-
 pub(crate) mod errors;
 
 use errors::HoudiniError;
